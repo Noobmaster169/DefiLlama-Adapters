@@ -1,0 +1,102 @@
+{
+  "address": "PLUtoojGogHkKWXH4ZY3SiNYhsiE5CEoMJLPargRoQ9",
+  "metadata": {"name": "pluto_leverage", "version": "0.1.0", "spec": "0.1.0", "description": "Created with Anchor"},
+  "instructions": [],
+  "accounts": [
+    {"name": "Earn", "discriminator": [190, 233, 64, 242, 58, 160, 120, 25]},
+    {"name": "Leverage", "discriminator": [35, 101, 38, 30, 142, 113, 71, 42]}
+  ],
+  "events": [],
+  "errors": [],
+  "types": [
+    {
+      "name": "Leverage",
+      "serialization": "bytemuckunsafe",
+      "repr": {"kind": "c"},
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {"name": "is_initialized", "type": "bool"},
+          {"name": "version", "type": "u8"},
+          {"name": "bump", "type": "u8"},
+          {"name": "freeze", "type": "bool"},
+          {"name": "align0", "type": {"array": ["u8", 4]}},
+          {"name": "created_at", "type": "i64"},
+          {"name": "updated_at", "type": "i64"},
+          {"name": "creator", "type": "pubkey"},
+          {"name": "protocol", "type": "pubkey"},
+          {"name": "market", "type": "pubkey"},
+          {"name": "leverage_apy", "type": "pubkey"},
+          {"name": "supply_unit", "type": "u64"},
+          {"name": "index", "type": "u64"},
+          {"name": "capital_amount", "type": "u64"},
+          {"name": "leverage_token_mint", "type": "pubkey"},
+          {"name": "leverage_token_program", "type": "pubkey"},
+          {"name": "leverage_token_decimals", "type": "u8"},
+          {"name": "leverage_token_oracle", "type": "pubkey"},
+          {"name": "padding1", "type": { "array": ["u64", 8] }}
+        ]
+      }
+    },
+    {
+      "name": "Earn",
+      "serialization": "bytemuckunsafe",
+      "repr": {"kind": "c"},
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {"name": "is_initialized", "type": "bool"},
+          {"name": "version", "type": "u8"},
+          {"name": "bump", "type": "u8"},
+          {"name": "freeze", "type": "bool"},
+          {"name": "align0", "type": {"array": ["u8", 4]}},
+          {"name": "created_at", "type": "i64"},
+          {"name": "updated_at", "type": "i64"},
+          {"name": "creator", "type": "pubkey"},
+          {"name": "protocol", "type": "pubkey"},
+          {"name": "market", "type": "pubkey"},
+          {"name": "earn_apy", "type": "pubkey"},
+          {"name": "earn_borrow_apy", "type": "pubkey"},
+          {"name": "earn_supply_umint", "type": "pubkey"},
+          {"name": "earn_supply_pmint", "type": "pubkey"},
+          {"name": "earn_supply_imint", "type": "pubkey"},
+          {"name": "earn_borrow_umint", "type": "pubkey"},
+          {"name": "earn_borrow_pmint", "type": "pubkey"},
+          {"name": "earn_borrow_imint", "type": "pubkey"},
+          {"name": "earn_token_mint", "type": "pubkey"},
+          {"name": "earn_token_program", "type": "pubkey"},
+          {"name": "earn_token_decimals", "type": "u8"},
+          {"name": "earn_token_oracle", "type": "pubkey"},
+          {"name": "last_index_update_at", "type": "i64"},
+          {"name": "padding1", "type": {"array": ["u64", 8]}}
+        ]
+      }
+    },
+    {
+      "name": "rate",
+      "serialization": "bytemuckunsafe",
+      "repr": {"kind": "c"},
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {"name": "lastUpdated", "type": "i64"},
+          {"name": "lastValue", "type": "u32"},
+          {"name": "align0", "type": {"array": ["u8", 4]}},
+          {"name": "lastEmaHourUpdated", "type": "i64"},
+          {"name": "emaHourly", "type": "u32"},
+          {"name": "align1", "type": {"array": ["u8", 4]}},
+          {"name": "lastEmaDayUpdated", "type": "i64"},
+          {"name": "ema3d", "type": "u32"},
+          {"name": "ema7d", "type": "u32"},
+          {"name": "ema14d", "type": "u32"},
+          {"name": "ema30d", "type": "u32"},
+          {"name": "ema90d", "type": "u32"},
+          {"name": "ema180d", "type": "u32"},
+          {"name": "ema365d", "type": "u32"},
+          {"name": "align2", "type": {"array": ["u8", 4]}},
+          {"name": "padding1", "type": {"array": ["u64", 7]}}
+        ]
+      }
+    }
+  ]
+}
